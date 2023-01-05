@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,7 +23,7 @@ namespace School
 
         static string[] GetAllStudents(Classroom[] classes)
         {
-            
+            return classes.SelectMany(x => x.Students).ToArray();
         }
 
         public class Classroom
